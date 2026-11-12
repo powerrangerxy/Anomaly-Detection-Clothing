@@ -1,0 +1,4 @@
+erosion,model,image_AUROC,pixel_AUROC,image_F1,pixel_F1
+erosion_20px,padim,0.7448,0.6538,0.877,0.5627
+erosion_20px,reverse_distillation,0.7756,0.6892,0.8897,0.5831
+///this is for jeans on 644 coco + png files

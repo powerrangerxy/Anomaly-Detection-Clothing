@@ -1,0 +1,5 @@
+model,fold,n_good,n_defect,image_AUROC,image_AUPR,image_F1max,image_FPR@95TPR,image_TPR@10FPR,pixel_AUROC,pixel_F1max,pixel_FPR@95TPR,thr95_image,thr10fpr_image,anomalib_image_AUROC,anomalib_pixel_AUROC,anomalib_image_F1,anomalib_pixel_F1
+padim,0,300,226,0.7587,0.696,0.6929,0.7767,0.3363,0.7425,0.4181,0.7577,-0.44148,1.18002,0.7587,0.7425,0.6905,0.4181
+padim,pooled,300,226,0.7587,0.696,0.6929,0.7767,0.3363,0.7425,0.4181,0.7577,-0.44148,1.18002,0.7587,0.7425,0.6905,0.4181
+reverse_distillation,0,300,226,0.7299,0.6163,0.6816,0.7467,0.2301,0.8099,0.4812,0.631,-0.48077,1.13435,0.73,0.8099,0.6791,0.4812
+reverse_distillation,pooled,300,226,0.7299,0.6163,0.6816,0.7467,0.2301,0.8099,0.4812,0.631,-0.48077,1.13435,0.73,0.8099,0.6791,0.4812

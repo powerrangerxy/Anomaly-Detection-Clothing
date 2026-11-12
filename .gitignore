@@ -1,0 +1,12 @@
+# environment
+.venv/
+__pycache__/
+*.pyc
+
+/202603_ReUseTex_Setup1
+/datasets/
+/results/
+/inspection_20px/
+/plots/
+/pre_trained/
+/sam3/

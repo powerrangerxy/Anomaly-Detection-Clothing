@@ -1,0 +1,16 @@
+{
+  "images_found": 451,
+  "images_ok": 451,
+  "images_failed": 0,
+  "images_no_mask": 0,
+  "garments": 254,
+  "patches": {
+    "abrasion": 49,
+    "good": 21937,
+    "hole_tear": 285,
+    "missing_functional_elements": 2,
+    "other_defects": 11,
+    "seam_defect": 38,
+    "stain_dirt": 338
+  }
+}

@@ -1,0 +1,4 @@
+model,image_AUROC,pixel_AUROC,image_F1,pixel_F1
+padim,0.7035,0.6581,0.8434,0.4452
+reverse_distillation,0.7018,0.6685,0.8564,0.4706
+//results thshirt zero shot

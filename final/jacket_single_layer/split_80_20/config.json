@@ -1,0 +1,80 @@
+{
+  "EROSION_PX": 20,
+  "PATCH_SIZE": 336,
+  "GARMENT_COVERAGE": 0.3,
+  "DEFECT_THRESHOLD": 0.02,
+  "GOOD_STRIDE": 336,
+  "EXCLUDE_CATEGORIES": [
+    "brand_marker"
+  ],
+  "HOLDOUT_TEST_FRAC": 0.2,
+  "N_FOLDS": 5,
+  "RANDOM_SEED": 42,
+  "TEST_CAP": 300,
+  "TRAIN_N": 5000,
+  "VAL_SAMPLE": 200,
+  "BACKBONE": "resnet18",
+  "MAX_EPOCHS": 50,
+  "TARGET_TPR": 0.95,
+  "TARGET_FPR": 0.1,
+  "N_BOOT": 1000,
+  "PIX_BINS": 4096,
+  "SIZE_BINS": [
+    [
+      0.0,
+      0.2,
+      "small (<20%)"
+    ],
+    [
+      0.2,
+      0.4,
+      "medium (20-40%)"
+    ],
+    [
+      0.4,
+      1.01,
+      "large (>=40%)"
+    ]
+  ],
+  "N_EXAMPLES": 6,
+  "TEST_CLASSES": [
+    "abrasion",
+    "hole_tear",
+    "missing_functional_elements",
+    "other_defects",
+    "seam_defect",
+    "stain_dirt"
+  ],
+  "MODEL_LABELS": {
+    "padim": "PaDiM",
+    "reverse_distillation": "RD"
+  },
+  "FILTER_FIELD": "garment_sub_category",
+  "FILTER_VALUE": "jacket_single_layer",
+  "PRED_KEYS": [
+    "classes",
+    "scores",
+    "raw_scores",
+    "maps",
+    "gt",
+    "fold"
+  ],
+  "split": "80_20",
+  "n_folds": 1,
+  "pool_stats": {
+    "images_found": 412,
+    "images_ok": 412,
+    "images_failed": 0,
+    "images_no_mask": 0,
+    "garments": 301,
+    "patches": {
+      "abrasion": 258,
+      "good": 18476,
+      "hole_tear": 145,
+      "missing_functional_elements": 40,
+      "other_defects": 23,
+      "seam_defect": 16,
+      "stain_dirt": 528
+    }
+  }
+}

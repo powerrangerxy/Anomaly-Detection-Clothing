@@ -1,0 +1,13 @@
+model,defect,n,n_garments,image_AUROC,image_AUROC_lo,image_AUROC_hi,recall@95TPR,recall_lo,recall_hi,recall@10FPR,recall10_lo,recall10_hi,pixel_AUROC,median_area
+padim,abrasion,8,3,0.66,0.4562,0.8384,0.875,0.5291,0.9776,0.25,0.0715,0.5907,0.6156,0.2834
+padim,hole_tear,36,10,0.7059,0.6153,0.7864,1.0,0.9036,1.0,0.3611,0.2248,0.5243,0.7471,0.5514
+padim,missing_functional_elements,1,1,0.9433,nan,nan,1.0,0.2065,1.0,1.0,0.2065,1.0,0.9649,0.1463
+padim,other_defects,1,1,0.9167,nan,nan,1.0,0.2065,1.0,1.0,0.2065,1.0,0.8585,0.2473
+padim,seam_defect,5,3,0.7693,0.48,0.9967,1.0,0.5655,1.0,0.6,0.2307,0.8824,0.7738,0.1658
+padim,stain_dirt,56,15,0.5805,0.5009,0.6585,0.9107,0.8074,0.9613,0.2321,0.141,0.3577,0.5605,0.2419
+reverse_distillation,abrasion,8,3,0.7188,0.5733,0.8425,1.0,0.6756,1.0,0.125,0.0224,0.4709,0.7083,0.2834
+reverse_distillation,hole_tear,36,10,0.8133,0.7604,0.8619,1.0,0.9036,1.0,0.3611,0.2248,0.5243,0.8619,0.5514
+reverse_distillation,missing_functional_elements,1,1,0.9633,nan,nan,1.0,0.2065,1.0,1.0,0.2065,1.0,0.9631,0.1463
+reverse_distillation,other_defects,1,1,0.8767,nan,nan,1.0,0.2065,1.0,0.0,0.0,0.7935,0.8868,0.2473
+reverse_distillation,seam_defect,5,3,0.7613,0.4553,0.9747,0.8,0.3755,0.9638,0.6,0.2307,0.8824,0.8083,0.1658
+reverse_distillation,stain_dirt,56,15,0.5639,0.4882,0.6406,0.9107,0.8074,0.9613,0.0893,0.0387,0.1926,0.5783,0.2419

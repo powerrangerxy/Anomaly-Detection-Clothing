@@ -1,0 +1,9 @@
+model,defect,n,n_garments,image_AUROC,image_AUROC_lo,image_AUROC_hi,recall@95TPR,recall_lo,recall_hi,recall@10FPR,recall10_lo,recall10_hi,pixel_AUROC,median_area
+padim,abrasion,13,4,0.7721,0.6517,0.8731,1.0,0.7719,1.0,0.3846,0.1771,0.6448,0.6728,0.3858
+padim,hole_tear,38,17,0.7966,0.7279,0.8598,1.0,0.9082,1.0,0.4737,0.3248,0.6274,0.7597,0.1928
+padim,other_defects,1,1,0.96,nan,nan,1.0,0.2065,1.0,1.0,0.2065,1.0,0.9505,0.1809
+padim,stain_dirt,60,10,0.7294,0.6608,0.7981,0.9167,0.8193,0.9639,0.35,0.2417,0.4764,0.7289,0.3066
+reverse_distillation,abrasion,13,4,0.7433,0.6333,0.8474,1.0,0.7719,1.0,0.2308,0.0818,0.5026,0.7912,0.3858
+reverse_distillation,hole_tear,38,17,0.6699,0.5844,0.7563,0.9211,0.792,0.9728,0.2895,0.17,0.4476,0.7239,0.1928
+reverse_distillation,other_defects,1,1,0.9333,nan,nan,1.0,0.2065,1.0,1.0,0.2065,1.0,0.956,0.1809
+reverse_distillation,stain_dirt,60,10,0.7036,0.6387,0.7692,0.9667,0.8864,0.9908,0.1667,0.0931,0.2803,0.7702,0.3066

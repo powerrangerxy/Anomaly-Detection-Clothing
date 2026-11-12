@@ -1,0 +1,15 @@
+category,subcategory,images,garments,images_without_defect,hole_tear,abrasion,stain_dirt,seam_defect,other_defects,missing_functional_elements
+group_misc,t_shirt,667,527,27,2557,215,2708,159,101,14
+group_trousers,jeans,630,409,20,1273,1851,886,86,114,7
+group_misc,sportswear,558,313,40,697,329,1656,774,194,28
+group_trousers,long_pants,552,423,16,1153,417,1443,165,115,59
+group_trousers,shorts,496,319,11,812,284,1990,446,145,104
+group_misc,misc,465,308,14,1188,110,2488,449,80,124
+knit_wool,,457,343,29,1086,196,897,82,346,103
+group_dress,dress,451,254,0,1083,78,737,631,45,109
+group_jacket,jacket_multi_layer,446,290,15,684,391,1187,535,74,291
+group_dress,skirt,431,238,12,757,312,714,531,117,101
+group_misc,polo_shirt,416,241,11,845,216,1274,367,51,134
+shirt_blouse,,416,297,0,950,463,3200,38,108,407
+group_jacket,jacket_single_layer,412,301,10,778,621,1738,266,95,144
+group_misc,sweatshirt,410,315,14,1280,204,1925,168,50,49

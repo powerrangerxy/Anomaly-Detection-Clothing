@@ -1,0 +1,4 @@
+erosion,model,image_AUROC,pixel_AUROC,image_F1,pixel_F1
+erosion_20px,padim,0.7372,0.6732,0.8658,0.4738
+erosion_20px,reverse_distillation,0.701,0.693,0.8638,0.4852
+//res tshirt fully trainied on 662 coco files

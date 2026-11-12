@@ -1,0 +1,3 @@
+erosion,model,image_AUROC,pixel_AUROC,image_F1,pixel_F1
+erosion_20px,padim,0.7091,0.6375,0.8736,0.5482
+erosion_20px,reverse_distillation,0.7429,0.688,0.8814,0.5804
