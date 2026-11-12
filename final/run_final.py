@@ -16,7 +16,6 @@ All outputs go to final/<sub>/, see final/README.md.
 
 import argparse
 import json
-import shutil
 import traceback
 
 import numpy as np
@@ -33,7 +32,8 @@ from settings import RANDOM_SEED, Paths, to_dict
 def parse_args():
     ap = argparse.ArgumentParser()
     ap.add_argument("--sub", required=True, help="garment type to filter on, e.g. t_shirt")
-    ap.add_argument("--field", default="garment_sub_category")
+    ap.add_argument("--field", default="garment_sub_category",
+                    help="use garment_main_category for knit_wool and shirt_blouse")
     ap.add_argument("--split", choices=["80_20", "5fold"], required=True)
     ap.add_argument("--rebuild", action="store_true", help="delete and rebuild the patch pool")
     return ap.parse_args()
@@ -42,7 +42,6 @@ def parse_args():
 def prepare_pool(paths: Paths, rebuild: bool) -> dict:
     # pool_stats.json is in the repository, but the patches and index.csv are not
     if rebuild or not (paths.pool / "index.csv").exists():
-        shutil.rmtree(paths.pool, ignore_errors=True)
         return patching.build_pool(paths)
     print(f"[POOL] exists at {paths.pool}, skipping (use --rebuild).")
     return json.load(open(paths.pool / "pool_stats.json"))

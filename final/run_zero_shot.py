@@ -31,7 +31,8 @@ MODEL_CLASSES = {"padim": Padim, "reverse_distillation": ReverseDistillation}
 def jeans_checkpoint(model_name):
     ckpts = sorted((CKPT_DIR / model_name).rglob("model.ckpt"))
     if len(ckpts) != 1:
-        raise FileNotFoundError(f"expected one {model_name} checkpoint in {CKPT_DIR}, found {len(ckpts)}")
+        raise SystemExit(f"expected one {model_name} checkpoint in {CKPT_DIR}, found {len(ckpts)}.\n"
+                         f"Train the jeans models first: python final/run_final.py --sub jeans --split 80_20")
     return ckpts[0]
 
 
@@ -55,6 +56,9 @@ def main():
     ap.add_argument("--sub", required=True, help="target garment type, e.g. t_shirt")
     ap.add_argument("--field", default="garment_sub_category")
     args = ap.parse_args()
+
+    for model_name in MODEL_CLASSES:  # fail early, before cutting any patches
+        jeans_checkpoint(model_name)
 
     paths = Paths(field=args.field, value=args.sub, split="5fold")
     out_dir = Path("final") / args.sub / "zero_shot_jeans"

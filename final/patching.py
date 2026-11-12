@@ -7,6 +7,7 @@ split in stage 2 can keep all patches of a garment on the same side.
 
 import csv
 import json
+import shutil
 import traceback
 from collections import defaultdict
 from pathlib import Path
@@ -175,6 +176,10 @@ def save_png(arr: np.ndarray, path: Path):
 
 def build_pool(paths: Paths) -> dict:
     pairs = find_pairs(paths.field, paths.value)
+    if not pairs:
+        raise SystemExit(f"no images with {paths.field} = '{paths.value}' in {DATA_ROOT}. "
+                         f"Check the spelling, or use --field garment_main_category for knit_wool and shirt_blouse.")
+    shutil.rmtree(paths.pool, ignore_errors=True)  # remove patches of an earlier run
     print(f"\n[POOL] {len(pairs)} {paths.value} images found")
     index = []
     ok = failed = skipped = 0

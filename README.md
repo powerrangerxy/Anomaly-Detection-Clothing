@@ -140,4 +140,8 @@ and evaluates everything with the same metrics. See `final/README.md`.
   (`data_cleaning/patch_pipeline.py`) instead of `02_segmentation`.
   Without these cached masks, `run_final.py` uses `02_segmentation`, so the jeans patches and numbers can differ slightly.
 - The patches are split by garment, so patches of the same garment are never in both training and test.
-- Seed 42 is used everywhere.
+- Seed 42 is used everywhere. Training on the GPU is not fully deterministic, so a new run can differ
+  from the numbers in the repository in the third decimal.
+- Running the scripts overwrites the result files in the repository. `git diff` shows what changed,
+  `git checkout -- final/` restores the original results.
+- We ran everything on one NVIDIA RTX 5070 Ti (16 GB).
