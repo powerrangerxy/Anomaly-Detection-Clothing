@@ -40,7 +40,8 @@ def parse_args():
 
 
 def prepare_pool(paths: Paths, rebuild: bool) -> dict:
-    if rebuild or not (paths.pool / "pool_stats.json").exists():
+    # pool_stats.json is in the repository, but the patches and index.csv are not
+    if rebuild or not (paths.pool / "index.csv").exists():
         shutil.rmtree(paths.pool, ignore_errors=True)
         return patching.build_pool(paths)
     print(f"[POOL] exists at {paths.pool}, skipping (use --rebuild).")

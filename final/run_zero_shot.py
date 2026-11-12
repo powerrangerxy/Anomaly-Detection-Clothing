@@ -58,6 +58,8 @@ def main():
 
     paths = Paths(field=args.field, value=args.sub, split="5fold")
     out_dir = Path("final") / args.sub / "zero_shot_jeans"
+    if not (paths.pool / "index.csv").exists():  # patches of the target type not cut yet
+        patching.build_pool(paths)
     index = patching.load_pool(paths)
     garment_of = {r["name"]: r["iid"] for r in index}
     folds = splits.make_folds(index, "5fold")
